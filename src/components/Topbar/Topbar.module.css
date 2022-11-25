@@ -1,0 +1,28 @@
+.topbar {
+    height: 48px;
+    border: 1px solid green;
+}
+
+.topbar__logo {
+    position: absolute;
+    left: 17.71%;
+    right: 17.71%;
+    top: 21.88%;
+    bottom: 21.88%;
+    color: var(--color-principal);
+}
+
+.topbar__title {
+    position: absolute;
+    color: var(--color-principal);
+    font-family: 'Poppins';
+    line-height: 30px;
+    width: 156px;
+    top: 9px;
+    left: 54px;
+    font-weight: 900;
+    font-size: 20px;
+
+    border: 1px solid gold;
+}
+

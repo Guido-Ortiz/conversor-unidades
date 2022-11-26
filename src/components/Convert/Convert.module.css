@@ -1,4 +1,4 @@
-.convert__container{
+.convert__container {
     position: absolute;
     width: 349px;
     height: 209px;
@@ -8,18 +8,138 @@
     background: var(--color-principal);
     box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
     border-radius: 21px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
 }
 
-.convert__title{
-    position: absolute;
+.convert__title {
+    /* position: absolute; */
     width: 104px;
     height: 35px;
     left: 42px;
-    top: 82px;  
+    top: 82px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 36px;   
+    line-height: 36px;
     color: #FFFFFF;
+    margin: 11px 21px;
+}
+
+.convert__select__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 254px;
+    height: 32px;
+    margin: 14px 21px;
+    /* color: #FFFFFF; */
+    /* border: 1px solid yellow; */
+}
+
+.convert__select {
+    width: 218px;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: var(--color-principal);
+    color: #FFFFFF;
+}
+
+.convert__select__option {
+    width: 150px;
+    height: 17px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+    border: none;
+}
+
+.convert__select__icon {
+    height: 13.5px;
+    width: 15.5px;
+    color: #FFFFFF;
+    margin-left: 15px;
+}
+
+.convert__input__container {
+    /* margin-bottom: 76px; */
+    margin-left: 21px;
+    width: 261px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+}
+
+.convert__input {
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: var(--color-principal);
+    width: 221px;
+    /* border: 1px solid greenyellow; */
+}
+
+.convert__input__unit {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+    margin-left: 15px;
+}
+
+.convert__result__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+    margin-left: 21px;
+    width: 275px;
+}
+
+.convert__result__icon {
+    height: 14.5px;
+    width: 17.5px;
+    color: #FFFFFF;
+    padding-top: 5px;
+}
+
+.convert__result {
+    width: 61px;
+    height: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.convert__results, .convert__result__unit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #FFFFFF;
+    /* border: 1px solid gray; */
+}
+
+.convert__result__unit {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    color: #FFFFFF;
+    /* border: 1px solid blue; */
 }

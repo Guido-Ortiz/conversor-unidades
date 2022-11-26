@@ -5,10 +5,10 @@
 
 .topbar__logo {
     position: absolute;
-    left: 17.71%;
-    right: 17.71%;
-    top: 21.88%;
-    bottom: 21.88%;
+    height: 18px;
+    width: 20.67px;
+    top: 7px;
+    left: 5.67px;
     color: var(--color-principal);
 }
 

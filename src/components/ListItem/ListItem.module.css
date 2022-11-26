@@ -1,0 +1,42 @@
+.container {
+    /* border: 1px solid green; */
+    width: 349px;
+    height: 38px;
+    background: #E3E3E3;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.text {
+    /* position: absolute;
+width: 144px;
+height: 23px;
+left: 39px;
+top: 371px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px; */
+
+    color: #676767;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 7px 18px;
+    height: 23px;
+    width: 144px;
+    /* border: 1px solid red; */
+}
+
+.delete {
+    margin-right: 14.71px;
+    /* border: 1px solid red; */
+}

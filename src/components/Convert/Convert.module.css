@@ -85,6 +85,8 @@
     border-bottom: 2px solid #FFFFFF;
     background-color: var(--color-principal);
     width: 221px;
+    text-align: right;
+    color: #FFFFFF;
     /* border: 1px solid greenyellow; */
 }
 
@@ -115,6 +117,11 @@
     color: #FFFFFF;
     padding-top: 5px;
 }
+
+.convert__result__icon:hover {
+    cursor: pointer;
+}
+
 
 .convert__result {
     width: 61px;

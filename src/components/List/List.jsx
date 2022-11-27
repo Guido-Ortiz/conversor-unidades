@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import ListItem from '../ListItem/ListItem';
@@ -8,22 +8,15 @@ const List = () => {
 
     const history = useSelector(state => state.history)
     const dispatch = useDispatch()
+    const result = useSelector(state => state.result)
+
+    const from = history
 
     console.log(history)
 
-    
-    // const history = [{
-    //     num: 100,
-    //     from: 'miles',
-    //     to: 'km',
-    //     result: 0
-    // },
-    // {
-    //     num: 100,
-    //     from: 'miles',
-    //     to: 'km',
-    //     result: 0
-    // }]
+    // useEffect(() => {
+        
+    // })
 
     return (
         <div className={s.list__container}>
@@ -34,7 +27,7 @@ const List = () => {
                     : (history.map((e, i) => {
                     return(
                         <div key={i}>
-                            <ListItem number={2} from={'millas'} to={'km'} result={23} />
+                            <ListItem number={e.number} from={e.units.split(' ')[0]} to={e.units.split(' ')[2]} />
                         </div>
                     )
                 }))

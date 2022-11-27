@@ -1,8 +1,7 @@
 import { SyncAlt, FavoriteBorder } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getResult } from '../../store/actions/actions';
-// import { useDispatch } from 'react-redux';
+import { addFavorite, getResult } from '../../store/actions/actions';
 import s from './Convert.module.css';
 
 const options = ['kms to miles', 'feets to mts', 'cms to inches', 'miles to kms', 'mts to feets', 'inches to cms']
@@ -21,13 +20,10 @@ const Convert = () => {
   const [to, setTo] = useState('miles')
 
   const handleUnits = (e) => {
-    // let array = form.units.split(' ')
     setForm({
       ...form,
       units: e.target.value
     })
-    // setFrom(form.split(' ')[0])
-    // setTo(form.split(' ')[2])
   }
   
   const handleNumber = (e) => {
@@ -47,15 +43,31 @@ const Convert = () => {
     changeUnits()
   }, [form.units])
 
-  // console.log(form)
-  // console.log(from);
-  // console.log(to);
-
   const data = [form.number, from, to]
   
   useEffect(() => {
     dispatch(getResult(data))
   }, [data])
+
+  const handleChangeUnits = (e) => {
+    // console.log('cambio')
+    let array = form.units.split(' ')
+    setTo(array[0])
+    setFrom(array[2])
+    // array=array.join(' ')
+  }
+
+  const handleAddFavorite = (e) => {
+    console.log(form)
+    dispatch(addFavorite(form))
+    // setForm({
+    //   number: 0
+    // })
+  }
+
+  // useEffect(() => {
+  //   handleChangeUnits()
+  // }, [from])
   
   
   return (
@@ -74,7 +86,7 @@ const Convert = () => {
           }
 
         </select>
-        <div className={s.convert__select__icon}>
+        <div className={s.convert__select__icon} onClick={(e) => handleChangeUnits(e)}>
           <SyncAlt />
         </div>
       </div>
@@ -85,7 +97,7 @@ const Convert = () => {
       </div>
 
       <div className={s.convert__result__container}>
-        <div className={s.convert__result__icon}>
+        <div className={s.convert__result__icon} onClick={(e) => handleAddFavorite(e)}>
           <FavoriteBorder />
         </div>
         <div className={s.convert__results}>
@@ -93,6 +105,7 @@ const Convert = () => {
           <div className={s.convert__result__unit}>{to}</div>
         </div>
       </div>
+
     </div>
   )
 }

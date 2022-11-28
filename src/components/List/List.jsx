@@ -10,18 +10,23 @@ const List = () => {
 
     return (
         <div className={s.list__container}>
+
             <div className={s.list__title}>saved</div>
-            {
-                history.length === 0
-                    ? <p>No favorites yet</p>
-                    : (history.map((e, i) => {
-                        return (
-                            <div key={i}>
-                                <ListItem number={e.number} from={e.units.split(' ')[0]} to={e.units.split(' ')[2]} index={e.id} />
-                            </div>
-                        )
-                    }))
-            }
+
+            <div className={s.list__favorites}>
+                {
+                    history.length === 0
+                        ? <p>No favorites yet</p>
+                        : (history.map((e, i) => {
+                            return (
+                                <div key={i} >
+                                    <ListItem number={e.number} from={e.units.split(' ')[0]} to={e.units.split(' ')[2]} index={e.id} />
+                                </div>
+                            )
+                        }))
+                }
+            </div>
+            
         </div>
     )
 }

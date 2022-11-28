@@ -10,7 +10,7 @@ const ListItem = ({ number, from, to, index }) => {
   
   const aux = result(number, from, to)
 
-  const handleDelete = () => {
+  const handleDelete = (index) => {
     dispatch(deleteFavorite(index))
   }
 

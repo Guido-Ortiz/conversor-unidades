@@ -19,11 +19,16 @@
     align-items: center;
     margin: 7px 18px;
     height: 23px;
-    width: 144px;
+    /* width: 144px; */
+    width: auto;
 }
 
 .delete {
     margin-right: 14.71px;
+}
+
+.delete:hover{
+    cursor: pointer;
 }
 
 @media only screen and (min-width:426px) and (max-width:1920px){

@@ -7,6 +7,7 @@ import s from './List.module.css';
 const List = () => {
 
     const history = useSelector(state => state.history)
+    console.log(history)
 
     return (
         <div className={s.list__container}>

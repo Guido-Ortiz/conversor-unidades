@@ -2,7 +2,8 @@ import { ADD_FAVORITE, DELETE_FAVORITE, GET_HISTORY, GET_RESULT } from "../actio
 import { result } from "../../utils/results"
 
 const initialState = {
-    history: [], 
+    history: [],
+    allHistory: [], 
     result : 0
 }
 
@@ -13,6 +14,7 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 history: action.payload,
+                allHistory: action.payload
             }
 
         case GET_RESULT:
@@ -26,7 +28,8 @@ function rootReducer(state = initialState, action) {
         case ADD_FAVORITE:
             return{
                 ...state,
-                history: [...state.history, action.payload]
+                history: [...state.history, action.payload],
+                allHistory: [...state.history, action.payload]
             }
 
         case DELETE_FAVORITE:

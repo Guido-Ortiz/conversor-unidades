@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import uuid from 'react-uuid';
 
 import { SyncAlt, FavoriteBorder } from '@mui/icons-material';
 
@@ -16,7 +17,6 @@ const Convert = () => {
   const [form, setForm] = useState({
     number: 0,
     units: '',
-
   })
 
   const [from, setFrom] = useState('kms')
@@ -58,11 +58,14 @@ const Convert = () => {
     setFrom(array[2])
   }
 
-  const [index, setIndex] = useState(0)
+  // const [index, setIndex] = useState(0)
 
   const handleAddFavorite = (e) => {
-    form.id = index
-    setIndex(prev => prev + 1)
+    // form.id = index
+    // setIndex(prev => prev + 1)
+    // dispatch(addFavorite(form))
+
+    form.id = uuid()
     dispatch(addFavorite(form))
   }
 
@@ -76,6 +79,7 @@ const Convert = () => {
 
         <div className={s.convert__select__container}>
           <select className={s.convert__select} onChange={e => handleUnits(e)}>
+            <option value="" disabled selected hidden>Select units</option>
             {
               options.map((p, i) => {
                 return (

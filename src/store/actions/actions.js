@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, GET_HISTORY, GET_RESULT } from "./constants";
+import { ADD_FAVORITE, DELETE_FAVORITE, GET_HISTORY, GET_RESULT } from "./constants";
 
 export function getHistory(payload){
     return{
@@ -17,6 +17,13 @@ export function getResult(payload){
 export function addFavorite(payload){
     return{
         type: ADD_FAVORITE,
+        payload
+    }
+}
+
+export function deleteFavorite(payload){
+    return{
+        type: DELETE_FAVORITE,
         payload
     }
 }

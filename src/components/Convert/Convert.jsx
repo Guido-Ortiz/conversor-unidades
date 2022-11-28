@@ -14,6 +14,7 @@ const Convert = () => {
   const [form, setForm] = useState({
     number: 0,
     units: '',
+    
   })
 
   const [from, setFrom] = useState('kms')
@@ -50,24 +51,18 @@ const Convert = () => {
   }, [data])
 
   const handleChangeUnits = (e) => {
-    // console.log('cambio')
     let array = form.units.split(' ')
     setTo(array[0])
     setFrom(array[2])
-    // array=array.join(' ')
   }
+
+  const [index, setIndex] = useState(0)
 
   const handleAddFavorite = (e) => {
-    console.log(form)
+    form.id = index
+    setIndex(prev => prev + 1)
     dispatch(addFavorite(form))
-    // setForm({
-    //   number: 0
-    // })
   }
-
-  // useEffect(() => {
-  //   handleChangeUnits()
-  // }, [from])
   
   
   return (

@@ -58,13 +58,7 @@ const Convert = () => {
     setFrom(array[2])
   }
 
-  // const [index, setIndex] = useState(0)
-
   const handleAddFavorite = (e) => {
-    // form.id = index
-    // setIndex(prev => prev + 1)
-    // dispatch(addFavorite(form))
-
     form.id = uuid()
     dispatch(addFavorite(form))
   }

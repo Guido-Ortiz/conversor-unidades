@@ -7,7 +7,6 @@ import s from './List.module.css';
 const List = () => {
 
     const history = useSelector(state => state.history)
-    console.log(history)
 
     return (
         <div className={s.list__container}>
@@ -17,7 +16,7 @@ const List = () => {
             <div className={s.list__favorites}>
                 {
                     history.length === 0
-                        ? <p>No favorites yet</p>
+                        ? <p className={s.list__title}>No favorites yet</p>
                         : (history.map((e, i) => {
                             return (
                                 <div key={i} >
@@ -27,7 +26,7 @@ const List = () => {
                         }))
                 }
             </div>
-            
+
         </div>
     )
 }

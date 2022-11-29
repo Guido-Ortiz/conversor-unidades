@@ -1,4 +1,3 @@
-import './App.css';
 import Convert from './components/Convert/Convert';
 import Footer from './components/Footer/Footer';
 import List from './components/List/List';
@@ -12,7 +11,6 @@ function App() {
 
       <Convert  />
       <List />
-      {/* <Home /> */}
 
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, DELETE_FAVORITE, GET_HISTORY, GET_RESULT } from "../actions/constants"
+import { ADD_FAVORITE, DELETE_FAVORITE, GET_RESULT } from "../actions/constants"
 import { result } from "../../utils/results"
 
 const initialState = {
@@ -9,13 +9,6 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
     switch (action.type) {
-
-        case GET_HISTORY:
-            return {
-                ...state,
-                history: action.payload,
-                allHistory: action.payload
-            }
 
         case GET_RESULT:
             let [number, from, to] = action.payload
